@@ -1,0 +1,464 @@
+@import url("https://fonts.googleapic.com/css2?family=BEsley:ital,wght@0,400;1,400;1,500&display=swap");
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Besley",serial;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    transition: 0.2s all linear;
+}
+ :root{
+    --main: rgb(85, 152, 239);
+    --box_shadow: 0 0.5rem 1.5rem rgba(96, 19, 19, 0.8);
+}
+*::selection{
+    background: var(--main);
+    color:black;
+} 
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 6.5rem;
+    scroll-behavior: smooth;
+}
+body{
+    background: lightblue;
+}
+section{
+    padding: 2rem 9%;
+}
+.btn {
+    display: inline-block;
+    background: var(--main);
+    color: #fff;
+    font-size: 1.7rem;
+    text-align: center;
+    padding: 0.8rem;
+    margin-top: 1rem;
+}
+.btn:hover{
+    letter-spacing: 0.2rem;
+    background: red;
+}
+.heading{
+    text-align: center;
+    font-size: 3.5rem;
+    color: #20209f;
+    padding: 1rem;
+    padding-bottom: 2rem;
+}
+.heading span{
+    color: var(--main);
+}
+ ::-webkit-scrollbar{
+    width: 10px;
+ }
+ ::-webkit-slider-thumb{
+    background-color: var(--main);
+ }
+ ::-webkit-scrollbar-track{
+    background: lightyellow;
+
+ }
+
+/* Header/navbar Start */
+.header{
+    background: lightblue;;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 9%;
+}
+.header .logo{
+    color: rgb(6, 14, 47);
+    font-size: 7rem;
+    font-weight: 800;
+}
+.header .logo i{
+    color: var(--main);
+    padding-right: 0.5rem;
+
+}
+.header .SearchBox{
+    display: flex;
+    height: 2rem;
+}
+.hearder .SearchBox #Search{
+    height: 100%;
+    width: 100%;
+    border: 0.1rem solid rgba(0, 0, 0, 3);
+    text-transform: none;
+    color: #222;
+    font-size: 2rem;
+    padding: 2rem;
+}
+.header .SearchBox label{
+    color: #fff;
+    font-size: 2rem;
+    height: 100%;
+    width: 4rem;
+    line-height: 2rem;
+    background: var(--main);
+    cursor: pointer;
+    text-align: center;
+}
+.MainHeader{
+    background: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5px;
+    height: 50px;
+    box-shadow: var(--box_shadow);
+    position: relative;
+}
+.MainHeader div{
+    font-size: 2rem;
+    color: #20209f;
+    padding: 2vw;
+}
+#MenuBtn{
+    font-size: 1rem;
+    border: 0.1rem solid #20209f;
+    color: #20209f;
+    padding: 0.8rem 1.5rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    display: none; 
+    }
+.MainHeader .navbar a{
+    color: #20209f;
+    font-size: 2rem;
+    border-radius: 0.5rem;
+    padding: 0.5rem 1.5rem;
+}
+.MainHeader .active{
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+.MainHeader .navbar a:hover {
+    color :#fff;
+    background: var(--main);
+}
+.MainHeader .icons i{
+    color: #20209f;
+    font-size: 2.5rem;
+    padding-left: 1rem;
+    cursor: pointer;
+}
+.MainHeader .icons i:hover{
+    color: var(--main);
+}
+/*Header/navbar End*/
+/*home Section Start */  
+.home{
+    display:flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.home .content{
+    flex: 1 1 40rem;
+    font-size: 5rem;
+}
+.home .content > span {
+    color: #555;
+    font-size: 5rem;
+
+}
+.home .content h3{
+    color:#07072d;
+    font-size: 5rem;
+}
+.home .image {
+    flex: 1 1 40rem;
+    padding-top: 5rem;
+}
+.home .image > image {
+    width: 20px;
+    height: 20px;
+}  
+        /*Home Section End */
+        /* Product  section start */
+       .Products {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            padding-top: 1rem;
+            justify-content: center;
+            
+        }
+        .Products .boxContainer {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+        padding-top: 1rem;
+        }
+        .Products .boxContainer .box {
+            text-align: center;
+            padding: 2rem;
+            flex: 1 1 25rem;
+            box-shadow: var(--box_shadow);
+            border: 0.1rem solid rgba(0, 0, 0, 0.3);
+            border-radius: 0.5rem;
+            position: relative;
+        }
+        .Products > .boxContainer > .box > img {
+            width: 100px;
+            height: 100px; /* Maintain aspect ratio */
+            border-radius: 0.6rem; /* Optional: match the box's border radius */
+            object-fit: fill;
+            text-align: left;
+            margin: 0 auto;
+        }
+        
+        .Products > .boxContainer >.box > .dis {
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            background: var(--main);
+            padding: 0.7rem 1rem;
+            font-size: 2rem;
+            color: #fff;
+        }
+        
+        .Products .boxContainer .box .icons {
+            position: absolute;
+            top: 0.5rem;
+            right: 1rem; 
+        }
+        .Products .boxContainer .box:hover .icons {
+            right: 1rem;
+        }
+        .Products .boxContainer .box .icons i {
+            display: block;
+            height: 4.5rem;
+            width: 4.5rem;
+            line-height: 4.5rem;
+            background: rgba(0, 0, 0, 0.8);
+            color: var(--main);
+            border-radius: 50%;
+            cursor: pointer;
+            margin-top: 0.7rem;
+            font-size: 1.7rem;
+        }
+        .Products .boxContainer .box .icons i:hover{
+            color: red;
+            background: var(--main);
+        }
+        .Products .box h3{
+            color: rgba(0, 0, 0, 0.8);
+            font-size: 2.5rem;
+        }
+        .Products .box .star{
+            color: #07072d;
+            font-size: 1.7rem;
+            padding: 1rem 0.1rem;
+        }
+        .Products .box .Price{
+            color: #07072d;
+            font-size: 2rem;
+            padding: 0.5rem 0rem;
+
+        }
+        .Products .box .Price span{
+            color: #888;
+            font-size: 1.5rem;
+            text-decoration: line-through;
+        }
+        .Products .box .Quantity{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-top: 1rem;
+            padding-bottom: 0.5rem;
+        }
+        .Products .box .Quantity input{
+            color: #07072d;
+            padding: 0.5rem;
+            background: white;
+            font-size: 1.5rem;
+            font-weight: 800;;
+            border: 0.1rem solid rgba(0, 0, 0, 0.2);
+        }  
+        .Products .box .Quantity span{
+            font-size: 1.7rem;
+            padding: 0 0.7rem;
+        }
+        /* Product  section end */
+        /* Deal selection start */
+        .Deal {
+            background: url(images/Deal.jpg);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 100vh;
+            margin: 0;
+            /* padding-top: 7rem;
+            padding-bottom: 7rem;
+            margin-bottom: 700px;
+            background-size: cover; */
+        }
+        /* Deal selection End */
+       
+        /* Category section start */
+        .Category {
+            margin-bottom: 200px;
+        }
+        .Category .boxContainer {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            padding-top: 1rem;
+        }
+        .Category .boxContainer image{
+            width: 20rem;
+            margin: 0.5rem 0;
+        }
+        .Category .boxContainer .box {
+            text-align: center;
+            padding: 2rem;
+            flex: 1 1 25rem;
+            box-shadow: var(--box_shadow);
+            border: 0.1rem solid rgba(0, 0, 0, 0.3);
+            border-radius: 0.5rem;
+        }
+        .Category .boxContainer .box h3 {
+            color: black;
+            font-size: 3.5rem;
+        }
+        .Category .BannerContainer .box p {
+            color: #555;
+            font-size: 2rem;
+            padding: 0.5rem 0;
+
+        }
+        /* Category section End */
+        /* contact for star */
+        .contact {
+            margin-bottom: 200px;
+        }
+        .contact form{
+            text-align: center;
+            border: 0.1rem solid rgba(0, 0, 0, 0.3);
+            width: 900px;
+            /* max-width: 500px; */
+            margin: 0 auto;
+        }
+        
+        .contact form .inputBox{
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        .contact form input,
+        textarea {
+            width: 49%;
+            margin: 1rem 0;
+            border: 0.1rem solid rgba(0, 0, 0, 0.3);
+            text-transform: none;
+            background: white;
+            font-size: 1.7rem;
+            padding: 1rem;
+        }
+        .contact textarea {
+            width: 100%;
+            resize: none;
+            height: 18rem;
+        }
+        /* contact form End */
+
+/* Responsive */
+/* media Query */
+@media(max-width:1200px){
+    html{
+        font-size: 55%;
+    }
+}
+@media(max-width:991px){
+    section{
+        padding: 2rem;
+    }
+    .header,
+     .MainHeader{
+        padding: 2rem;
+    }
+}
+@media(max-width:768px){
+    #Menubtn{
+        display: initial;
+    }
+    .MainHeader .navbar{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: #20209f;
+        padding: 1rem 2rem; 
+}
+.MainHeader .navbar a{
+    display: block;
+    background: #fff;
+    font-size: 2.5rem;
+    margin: 1.5rem 0;
+    padding: 0;;
+}
+.MainHeader .navbar.active {
+    display: initial;
+}
+}
+/* home */
+.home .content {
+    text-align: center;
+}
+.home > .content > h3{
+    font-size: 3rem;
+}
+.home > .image image{
+    margin-top: -10px;
+}
+/* Deal */
+.deal .content{
+    max-width: 100%;
+    text-align: center;
+}
+.deal .content .counter{
+    justify-content: center;
+}
+/* Contact */
+.contact .inputBox input {
+    width: 100%;
+}
+
+@media(max-width: 460px){
+    html {
+        font-size: 50%;
+    }
+    .header{
+        flex-flow: column;
+    }
+    .header .logo {
+        font-size: 3rem;
+    }
+    .header .SearchBox{
+        width: 100%;
+        margin-top: 3rem;
+    }
+}
+.deals{
+    background-image: url(images/category6.jpg);
+    text-align: center;
+    object-fit: contain;
+}
+.deals h1{
+    font-size: larger;
+    font-weight: bold;
+}
+.deals p{
+    font-size: medium;
+}
